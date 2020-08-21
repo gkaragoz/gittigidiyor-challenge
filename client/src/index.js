@@ -1,8 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
+
+import { GlobalStyle } from "./theme";
 
 import { ApolloClient, InMemoryCache } from "@apollo/client";
 import { ApolloProvider } from "@apollo/client";
@@ -16,6 +17,7 @@ ReactDOM.render(
   <React.StrictMode>
     <ApolloProvider client={client}>
       <App />
+      <GlobalStyle />
     </ApolloProvider>
   </React.StrictMode>,
   document.getElementById("root")

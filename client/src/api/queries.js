@@ -8,6 +8,7 @@ export const getProductsQuery = gql`
       price
       currency
       imageURL
+      detailsURL
       shipping
     }
   }
