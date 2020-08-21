@@ -17,8 +17,6 @@ function ProductCard({ product, onFavoriteClicked, hasFavorited }) {
     title,
   } = product;
 
-  const onClick = (e) => {};
-
   const getShippingDetails = () => {
     let icon;
     let status;
@@ -61,7 +59,7 @@ function ProductCard({ product, onFavoriteClicked, hasFavorited }) {
         )}
       </FavoriteButton>
       <a href={detailsURL} target="_blank" rel="noopener noreferrer">
-        <Content onClick={onClick}>
+        <Content>
           <img src={imageURL} alt={title} />
           <h2>{title}</h2>
           <PriceBox>
@@ -79,7 +77,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   margin: 0 1%;
-  width: 22%;
+  width: 23%;
   transition: all 0.3s;
 
   &:hover {

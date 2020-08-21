@@ -64,7 +64,9 @@ function App() {
 }
 
 const Container = styled.div`
+  max-width: 1300px;
   padding: 64px 64px;
+  margin: 0 auto;
 `;
 
 const Head = styled.div`
@@ -124,6 +126,7 @@ const Content = styled.div`
   box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2);
 
   h1 {
+    margin-left: 12px;
     font-size: 20px;
     font-weight: 500;
     margin-bottom: 20px;
