@@ -76,9 +76,28 @@ const Container = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
-  margin: 0 1%;
-  width: 23%;
+  margin: 1% 1%;
+  max-width: 23%;
+  flex: 23%;
   transition: all 0.3s;
+
+  /* On screens that are 1110px wide or less, go from four columns to two columns */
+  @media screen and (max-width: 1110px) {
+    max-width: 31%;
+    flex: 31%;
+  }
+
+  /* On screens that are 1110px wide or less, go from four columns to two columns */
+  @media screen and (max-width: 840px) {
+    max-width: 48%;
+    flex: 48%;
+  }
+
+  /* On screens that are 1110px wide or less, go from four columns to two columns */
+  @media screen and (max-width: 710px) {
+    max-width: 98%;
+    flex: 98%;
+  }
 
   &:hover {
     transform: translateY(-5px);

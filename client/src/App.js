@@ -65,8 +65,12 @@ function App() {
 
 const Container = styled.div`
   max-width: 1300px;
-  padding: 64px 64px;
+  padding: 64px 10px;
   margin: 0 auto;
+
+  @media screen and (max-width: 710px) {
+    min-width: 400px;
+  }
 `;
 
 const Head = styled.div`
@@ -135,6 +139,7 @@ const Content = styled.div`
 
 const Products = styled.div`
   display: flex;
+  flex-wrap: wrap;
 `;
 
 export default App;
