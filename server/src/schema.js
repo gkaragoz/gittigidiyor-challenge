@@ -7,6 +7,7 @@ const typeDefs = gql`
     price: String!
     currency: String!
     imageURL: String
+    detailsURL: String
     shipping(shippingType: ShippingType): String
   }
 

@@ -1,7 +1,7 @@
 const products = [
   {
     id: "70c8c35b-8e1c-44a0-baf7-37c3bb547da8",
-    title: "Apple iPhone 11 Cep Telefonu",
+    title: "Apple iPhone 11 Cep Telefonu Apple Türkiye Garantili",
     price: "7.699,00",
     currency: "TL",
     imageURL:
@@ -12,7 +12,7 @@ const products = [
   },
   {
     id: "d241089e-2331-422e-b63a-70be588209a8",
-    title: "Xiaomi Mi 9 8 GB Cep Telefonu",
+    title: "Xiaomi Mi 9 8 GB Cep Telefonu Xiaomi Türkiye Garantili",
     price: "6.249,00",
     currency: "TL",
     imageURL:
@@ -23,7 +23,7 @@ const products = [
   },
   {
     id: "c6e84da8-97b5-482b-8521-bf01cfdeb31d",
-    title: "Apple iPhone 11 Cep Telefonu",
+    title: "Apple iPhone 11 Cep Telefonu Apple Türkiye Garantili",
     price: "14.499,00",
     currency: "TL",
     imageURL:
@@ -34,10 +34,11 @@ const products = [
   },
   {
     id: "69593db3-5c01-4295-8ce1-bf82facf71e7",
-    title: "Huawei P40 P40 Pro Cep Telefonu",
+    title: "Huawei P40 P40 Pro Cep Telefonu Huawei Türkiye Garantili",
     price: "11.234,00",
     currency: "TL",
-    imageURL: "",
+    imageURL:
+      "https://mcdn01.gittigidiyor.net/57527/tn50/575276102_tn50_0.jpg?1597953",
     detailsURL:
       "https://www.gittigidiyor.com/huawei-p40-p40-pro_spp_770578?id=575276102",
     shippingType: "NON_FREE",
