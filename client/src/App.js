@@ -68,7 +68,7 @@ const Container = styled.div`
   padding: 64px 10px;
   margin: 0 auto;
 
-  @media screen and (max-width: 710px) {
+  @media screen and (max-width: ${theme.mediaQueries.phoneScreen}) {
     min-width: 400px;
   }
 `;
@@ -80,32 +80,32 @@ const Head = styled.div`
 
 const LikedState = styled.div`
   display: flex;
-  background-color: ${theme.white};
-  width: 200px;
-  height: 75px;
+  background-color: ${theme.colors.white};
+  min-width: 200px;
+  min-height: 75px;
   margin-right: 15px;
   justify-content: center;
   align-items: center;
   box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2);
 
   h1 {
-    font-size: 26px;
+    font-size: ${theme.fontSizes.veryLarge};
     font-weight: bold;
   }
 
   svg {
-    margin-right: 15px;
-    width: 48px;
-    height: 48px;
-    fill: ${theme.red};
+    margin-right: 1.5rem;
+    width: 4.8rem;
+    height: 4.8rem;
+    fill: ${theme.colors.red};
   }
 `;
 
 const LikedList = styled.a`
   display: flex;
-  background-color: ${theme.white};
-  width: 200px;
-  height: 75px;
+  background-color: ${theme.colors.white};
+  min-width: 20rem;
+  min-height: 7.5rem;
   justify-content: center;
   align-items: center;
   box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -114,26 +114,26 @@ const LikedList = styled.a`
   &:hover {
     cursor: pointer;
     transform: translateY(-2px);
-    background-color: ${theme.secondaryColor};
+    background-color: ${theme.colors.secondaryColor};
   }
 
   h1 {
-    font-size: 26px;
+    font-size: ${theme.fontSizes.veryLarge};
     font-weight: bold;
   }
 `;
 
 const Content = styled.div`
-  padding: 25px;
-  background-color: #fff;
-  border-radius: 5px;
+  padding: 2.5rem;
+  background-color: ${theme.colors.white};
+  border-radius: 0.5rem;
   box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2);
 
   h1 {
-    margin-left: 12px;
-    font-size: 20px;
+    margin-left: 1.2rem;
+    font-size: ${theme.fontSizes.large};
     font-weight: 500;
-    margin-bottom: 20px;
+    margin-bottom: 2rem;
   }
 `;
 

@@ -7,6 +7,7 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-size: 10px;
   }
 
   body {
@@ -21,12 +22,25 @@ export const GlobalStyle = createGlobalStyle`
 `;
 
 export const theme = {
-  primaryColor: "#ededee",
-  secondaryColor: "#f4f4f4",
-  red: "#c0392b",
-  green: "#19b55e",
-  white: "#fff",
-  darkGray: "#555",
+  colors: {
+    primaryColor: "#ededee",
+    secondaryColor: "#f4f4f4",
+    red: "#c0392b",
+    green: "#19b55e",
+    white: "#fff",
+    darkGray: "#555",
+  },
+  mediaQueries: {
+    wideScreen: "1110px",
+    tabletScreen: "840px",
+    phoneScreen: "710px",
+  },
+  fontSizes: {
+    veryLarge: "2.6rem",
+    large: "2rem",
+    medium: "1.6rem",
+    small: "1.2rem",
+  },
 };
 
 export default styled;

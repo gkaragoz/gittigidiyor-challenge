@@ -63,7 +63,9 @@ function ProductCard({ product, onFavoriteClicked, hasFavorited }) {
           <img src={imageURL} alt={title} />
           <h2>{title}</h2>
           <PriceBox>
-            {price} {currency}
+            <h3>
+              {price} <span>{currency}</span>
+            </h3>
           </PriceBox>
           {getShippingDetails()}
         </Content>
@@ -81,20 +83,20 @@ const Container = styled.div`
   flex: 23%;
   transition: all 0.3s;
 
-  /* On screens that are 1110px wide or less, go from four columns to two columns */
-  @media screen and (max-width: 1110px) {
+  /* go from four columns to three columns */
+  @media screen and (max-width: ${theme.mediaQueries.wideScreen}) {
     max-width: 31%;
     flex: 31%;
   }
 
-  /* On screens that are 1110px wide or less, go from four columns to two columns */
-  @media screen and (max-width: 840px) {
+  /*go from three columns to two columns */
+  @media screen and (max-width: ${theme.mediaQueries.tabletScreen}) {
     max-width: 48%;
     flex: 48%;
   }
 
-  /* On screens that are 1110px wide or less, go from four columns to two columns */
-  @media screen and (max-width: 710px) {
+  /* go from two columns to one column */
+  @media screen and (max-width: ${theme.mediaQueries.phoneScreen}) {
     max-width: 98%;
     flex: 98%;
   }
@@ -105,21 +107,21 @@ const Container = styled.div`
 
   a {
     text-decoration: none;
-    color: ${theme.darkGray};
+    color: ${theme.colors.darkGray};
   }
 `;
 
 const Content = styled.div`
-  border-radius: 5px;
-  border: 2px solid ${theme.secondaryColor};
-  padding: 20px 10px;
+  border-radius: 0.5rem;
+  border: 0.2rem solid ${theme.colors.secondaryColor};
+  padding: 2rem 1rem;
   box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2);
 
   img {
     align-self: center;
     object-fit: contain;
     width: 100%;
-    height: 250px;
+    height: 25rem;
   }
 
   h2 {
@@ -128,9 +130,9 @@ const Content = styled.div`
     display: -webkit-box;
     -webkit-line-clamp: 2; /* number of lines to show */
     -webkit-box-orient: vertical;
-    color: ${theme.darkGray};
-    padding: 0px 10px;
-    font-size: 16px;
+    color: ${theme.colors.darkGray};
+    padding: 0 1rem;
+    font-size: ${theme.fontSizes.medium};
     font-weight: 600;
   }
 `;
@@ -140,10 +142,10 @@ const FavoriteButton = styled.button`
   position: absolute;
   border-radius: 50%;
   border: 0;
-  width: 30px;
-  height: 30px;
-  top: 10px;
-  right: 10px;
+  width: 3rem;
+  height: 3rem;
+  top: 1rem;
+  right: 1rem;
   justify-content: center;
   align-items: center;
   outline: none;
@@ -154,40 +156,48 @@ const FavoriteButton = styled.button`
     transform: scale(1.2);
     cursor: pointer;
     svg {
-      fill: ${(props) => (props.isShown ? theme.red : theme.darkGray)};
+      fill: ${(props) =>
+        props.isShown ? theme.colors.red : theme.colors.darkGray};
     }
   }
 
   svg {
-    width: 16px;
-    height: 16px;
-    fill: ${(props) => (props.hasFavorited ? theme.red : theme.darkGray)};
+    width: 1.6rem;
+    height: 1.6rem;
+    fill: ${(props) =>
+      props.hasFavorited ? theme.colors.red : theme.colors.darkGray};
   }
 `;
 
 const PriceBox = styled.div`
-  background-color: ${theme.primaryColor};
-  margin: 8px 0px;
-  padding: 5px 15px;
-  font-size: 20px;
+  background-color: ${theme.colors.primaryColor};
+  margin: 0.8rem 0;
+  padding: 0.5rem 1.5rem;
+  font-size: ${theme.fontSizes.large};
   font-weight: bold;
-  border-radius: 5px;
+  border-radius: 0.5rem;
+  word-wrap: break-word;
+
+  h3,
+  span {
+    font-size: ${theme.fontSizes.large};
+  }
 `;
 
 const Shipping = styled.div`
   display: flex;
-  padding: 5px 15px;
+  padding: 0.5rem 1.5rem;
 
   svg {
-    width: 15px;
-    fill: ${theme.green};
-    margin-right: 5px;
+    width: 1.5rem;
+    fill: ${theme.colors.green};
+    margin-right: 0.5rem;
   }
 
   p {
-    font-size: 12px;
+    font-size: ${theme.fontSizes.small};
     font-weight: 600;
-    color: ${theme.darkGray};
+    color: ${theme.colors.darkGray};
   }
 `;
 
