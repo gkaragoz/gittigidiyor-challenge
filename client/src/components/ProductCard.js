@@ -155,6 +155,7 @@ const FavoriteButton = styled.button`
   &:hover {
     transform: scale(1.2);
     cursor: pointer;
+
     svg {
       fill: ${(props) =>
         props.isShown ? theme.colors.red : theme.colors.darkGray};
@@ -162,6 +163,7 @@ const FavoriteButton = styled.button`
   }
 
   svg {
+    pointer-events: none;
     width: 1.6rem;
     height: 1.6rem;
     fill: ${(props) =>
